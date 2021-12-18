@@ -1,0 +1,15 @@
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\CsConsoleLogic.exe
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\CsConsoleLogic.deps.json
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\CsConsoleLogic.runtimeconfig.json
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\CsConsoleLogic.dll
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\ref\CsConsoleLogic.dll
+E:\VS\CsConsoleLogic\CsConsoleLogic\bin\Debug\net6.0\CsConsoleLogic.pdb
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.csproj.AssemblyReference.cache
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.AssemblyInfoInputs.cache
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.AssemblyInfo.cs
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.csproj.CoreCompileInputs.cache
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.dll
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\ref\CsConsoleLogic.dll
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.pdb
+E:\VS\CsConsoleLogic\CsConsoleLogic\obj\Debug\net6.0\CsConsoleLogic.genruntimeconfig.cache
