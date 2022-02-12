@@ -38,19 +38,19 @@
             return true;
         }
 
-        public void Log(string text) =>
-            ConsoleLogger.Log(text);
+        public virtual void Log(string text) =>
+            Log(text, ConsoleLogger.DefaultColor);
 
-        public void Log(string text, ConsoleColor color) =>
+        public virtual void Log(string text, ConsoleColor color) =>
             ConsoleLogger.Log(text, color);
 
-        public void LogError(string text) =>
-            ConsoleLogger.Log(text, ConsoleColor.Red);
+        public virtual void LogError(string text) =>
+            Log(text, ConsoleColor.Red);
 
-        public void NoOptionException(string option) =>
-            ConsoleLogger.Log($"Option <b>{option}</b> does not exist!", ConsoleColor.Red);
+        public virtual void NoOptionException(string option) =>
+            LogError($"Option <b>{option}</b> does not exist!");
 
-        public void ParseException(string text, string type) =>
-            ConsoleLogger.Log($"Couldn't parse <b>{text}</b> to {type}!", ConsoleColor.Red);
+        public virtual void ParseException(string text, string type) =>
+            LogError($"Couldn't parse <b>{text}</b> to {type}!");
     }
 }

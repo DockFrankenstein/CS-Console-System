@@ -9,7 +9,7 @@
         public override void Run(List<string> args)
         {
             if (!CheckForArgumentCount(args, 0)) return;
-            Console.Clear();
+            ConsoleLogger.Clear();
         }
     }
 }

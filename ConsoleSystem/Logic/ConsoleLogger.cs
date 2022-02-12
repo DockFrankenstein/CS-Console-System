@@ -6,6 +6,8 @@ namespace ConsoleSystem
     {
         public static ConsoleColor DefaultColor { get => ConsoleColor.Gray; }
 
+        public static bool EnableClearing { get; set; } = true;
+
         public static void Log(string? text) =>
             Log(text, DefaultColor);
 
@@ -19,6 +21,12 @@ namespace ConsoleSystem
             ForegroundColor = color;
             WriteLine($"[{time:yyyy/MM/dd} {time:HH/mm/ss} {time:zz}] {text}");
             ForegroundColor = DefaultColor;
+        }
+
+        public static void Clear()
+        {
+            if (!EnableClearing) return;
+            Console.Clear();
         }
 
         public static string GetInput()
