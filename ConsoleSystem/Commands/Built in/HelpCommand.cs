@@ -1,4 +1,6 @@
-﻿namespace ConsoleSystem.Commands.Builtin
+﻿using CommandList = ConsoleSystem.Commands.ConsoleCommandList;
+
+namespace ConsoleSystem.Commands.Builtin
 {
     public class HelpCommand : ConsoleCommand
     {
@@ -11,7 +13,7 @@
 
         public override void Run(List<string> args)
         {
-            pageCount = Commands.Commands.Count / CommandLimit;
+            pageCount = CommandList.Commands.Count / CommandLimit;
 
             switch (pageCount)
             {
@@ -33,15 +35,15 @@
 
             string s = pageCount == 1 ? "Displaying help:" : $"Displaying help page {page} out of {pageCount}";
 
-            for (int i = page * CommandLimit; i < Math.Min(Commands.Commands.Count, (page + 1) * CommandLimit); i++)
-                s += $"\n- {Commands.Commands[i].CommandName} - {Commands.Commands[i].Description}";
+            for (int i = page * CommandLimit; i < Math.Min(CommandList.Commands.Count, (page + 1) * CommandLimit); i++)
+                s += $"\n- {CommandList.Commands[i].CommandName} - {CommandList.Commands[i].Description}";
 
             Log(s);
         }
 
         void DisplayDetailedDescription(string commandName)
         {
-            if (!Commands.TryGettingConsoleCommand(commandName, out ConsoleCommand? command))
+            if (!CommandList.TryGettingConsoleCommand(commandName, out ConsoleCommand? command))
             {
                 LogError($"Command '{commandName.ToLower()}' does not exist!");
                 return;

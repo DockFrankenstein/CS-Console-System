@@ -9,6 +9,9 @@ namespace ConsoleSystem
         public static void Log(string? text) =>
             Log(text, DefaultColor);
 
+        public static void LogError(string? text) =>
+            Log(text, ConsoleColor.Red);
+
         public static void Log(string? text, ConsoleColor color)
         {
             if (string.IsNullOrEmpty(text)) return;

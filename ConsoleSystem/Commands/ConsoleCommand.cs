@@ -1,6 +1,4 @@
-﻿using ConsoleSystem.Logic;
-
-namespace ConsoleSystem.Commands
+﻿namespace ConsoleSystem.Commands
 {
     public abstract class ConsoleCommand
     {
@@ -54,7 +52,5 @@ namespace ConsoleSystem.Commands
 
         public void ParseException(string text, string type) =>
             ConsoleLogger.Log($"Couldn't parse <b>{text}</b> to {type}!", ConsoleColor.Red);
-
-        public CommandList Commands { get; set; }
     }
 }

@@ -12,7 +12,7 @@
             Log("\n" +
                 "             ///////////////    /////   qASIC based console v0.0.1\n" +
                 "          ///////       ////////////    https://qasictools.com\n" +
-                $"        /////               //////      command count: {Commands.Commands.Count}\n" +
+                $"        /////               //////      command count: {ConsoleCommandList.Commands.Count}\n" +
                 "       ////                   ////      \n" +
                 "      ////                     ////     \n" +
                 "      ////                     ////     \n" +

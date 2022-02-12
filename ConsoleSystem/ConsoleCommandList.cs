@@ -4,13 +4,13 @@ using static ConsoleSystem.ConsoleLogger;
 
 namespace ConsoleSystem.Commands
 {
-    public class CommandList
+    public static class ConsoleCommandList
     {
-        readonly List<ConsoleCommand> commands = new List<ConsoleCommand>();
+        static List<ConsoleCommand> commands = new List<ConsoleCommand>();
 
-        public List<ConsoleCommand> Commands { get => commands; }
+        public static List<ConsoleCommand> Commands { get => commands; }
 
-        public CommandList()
+        public static void Initialize()
         {
             Log("Creating command list...", ConsoleColor.Magenta);
             List<Type> types = GetTypes();
@@ -22,7 +22,6 @@ namespace ConsoleSystem.Commands
                 if (constructor == null) return;
 
                 ConsoleCommand command = (ConsoleCommand)constructor.Invoke(null);
-                command.Commands = this;
 
                 if (command.Active)
                     commands.Add(command);
@@ -39,7 +38,7 @@ namespace ConsoleSystem.Commands
             return assembly.GetTypes().Where(t => t != type && type.IsAssignableFrom(t)).ToList();
         }
 
-        public bool TryGettingConsoleCommand(string cmd, out ConsoleCommand? command)
+        public static bool TryGettingConsoleCommand(string cmd, out ConsoleCommand? command)
         {
             command = null;
             for (int i = 0; i < Commands.Count; i++)

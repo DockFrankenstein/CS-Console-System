@@ -1,6 +1,6 @@
 ﻿namespace ConsoleSystem.Logic
 {
-    public static class ArgumentSorter
+    public static class ConsoleArgumentSorter
     {
         //TODO: clean up this mess
         //This is one of the oldest peaces of qASIC code, it should get replaced one day by a cleaner solution
