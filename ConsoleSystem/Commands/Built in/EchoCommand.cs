@@ -2,8 +2,8 @@
 {
     public class EchoCommand : ConsoleCommand
     {
-        public override string CommandName { get => "echo"; }
-        public override string Description { get => "prints out a log"; }
+        public override string CommandName => "echo";
+        public override string Description => "prints out a log";
 
         public override void Run(List<string> args)
         {
